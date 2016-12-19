@@ -34,7 +34,6 @@ export default class HomePage extends Component {
             name: 'Task',
             title: 'Task',
             passProps: {}
-            }
         });
     }
 }
