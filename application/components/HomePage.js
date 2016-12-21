@@ -12,6 +12,7 @@ export default class HomePage extends Component {
                 <Text>'Hello this is my home page'</Text>
                 <Button onPress={this.goToMyAboutPage} title="Go to aboutPage"></Button>
                 <Button onPress={this.goToMyTasklist} title="Go to Tasklist"></Button>
+                <Button onPress={this.goToMyFetchPage} title="Go to FetchPage"></Button>
             </View>
         );
     }
@@ -33,6 +34,14 @@ export default class HomePage extends Component {
         this.props.navigator.push({
             name: 'Task',
             title: 'Task',
+            passProps: {}
+        });
+    }
+
+    goToMyFetchPage = () => {
+        this.props.navigator.push({
+            name: 'HTTP',
+            title: 'Fetch',
             passProps: {}
         });
     }
